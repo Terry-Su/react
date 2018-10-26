@@ -111,6 +111,7 @@
     "prettier": "node ./scripts/prettier/index.js write-changed",
     "prettier-all": "node ./scripts/prettier/index.js write",
     "version-check": "node ./scripts/tasks/version-check.js",
+    "customBuild": "yarn build core,dom --type=UMD",
     "custom": "http-server -p 6061"
   }
 }
