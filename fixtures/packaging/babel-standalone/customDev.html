@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <script src="../../../build/dist/react.development.js"></script>
+    <script src="../../../build/dist/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+    <div id="container"></div>
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor( props ) {
+          super( props )
+
+          // this.state = {
+          //   count: 0
+          // }
+        }
+
+        componentDidMount() {
+          // this.setState( { count: 1 } )
+        }
+
+        render() {
+          return <h1>Count: { this.state.count }</h1>
+        }
+      }
+      // ReactDOM.render(
+      //   <App />,
+      //   document.getElementById('container')
+      // );
+
+      console.log( new App() )
+      // ReactDOM.render(
+      //   <h1>Hello World!</h1>,
+      //   document.getElementById('container')
+      // );
+    </script>
+  </body>
+</html>
