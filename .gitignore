@@ -22,3 +22,9 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
+
+
+
+# custom
+custom/sourceFromBuild
+custom/build

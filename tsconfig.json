@@ -1,0 +1,15 @@
+{
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "module": "commonJS",
+		"target": "es5",
+    "allowJs": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "lib": [ "es2016", "dom" ],
+  }
+}

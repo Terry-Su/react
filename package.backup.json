@@ -56,7 +56,6 @@
     "fbjs-scripts": "^0.8.3",
     "filesize": "^3.5.6",
     "flow-bin": "^0.72.0",
-    "fs-extra": "^7.0.1",
     "glob": "^6.0.4",
     "glob-stream": "^6.1.0",
     "google-closure-compiler": "20180506.0.0",
@@ -68,7 +67,6 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
-    "nodemon": "^1.18.6",
     "object-assign": "^4.1.1",
     "prettier": "1.13.7",
     "prop-types": "^15.6.2",
@@ -81,13 +79,11 @@
     "rollup-plugin-node-resolve": "^2.1.1",
     "rollup-plugin-prettier": "^0.3.0",
     "rollup-plugin-replace": "^2.0.0",
-    "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-strip-banner": "^0.2.0",
     "semver": "^5.5.0",
     "targz": "^1.0.1",
     "through2": "^2.0.0",
     "tmp": "~0.0.28",
-    "ts-node": "^7.0.1",
     "typescript": "~1.8.10"
   },
   "devEngines": {
@@ -115,9 +111,7 @@
     "prettier": "node ./scripts/prettier/index.js write-changed",
     "prettier-all": "node ./scripts/prettier/index.js write",
     "version-check": "node ./scripts/tasks/version-check.js",
-    "custom-build": "yarn build core,dom --type=umd",
-    "custom": "browser-sync start --server --port 6063 --watch custom/build --directory --startPath custom/build/test.html --no-open",
-    "custom2": "browser-sync start --server --port 6062 --watch fixtures/packaging/babel-standalone --directory --startPath fixtures/packaging/babel-standalone/customDev.html --no-open",
-    "custom-generate": "nodemon custom/splitReactDomFile --watch custm/rules.js --watch custom/splitReactDomFile.js"
+    "custom-build": "yarn build core,dom --type=UMD",
+    "custom": "browser-sync start --server --port 6062 --watch fixtures/packaging/babel-standalone --directory --startPath fixtures/packaging/babel-standalone/customDev.html --no-open"
   }
 }
