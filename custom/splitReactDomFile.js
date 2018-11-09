@@ -149,13 +149,13 @@ function buildHtml( outputHtmlPath, filesData,  ) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <div id="container"></div>
     ${ babelScript }
     ${ ! isTestAll && isOnlyTestReact ? `<script src="../../../build/dist/react.development.js"></script>` : '' }
     ${ scripts }
     ${ ! isTestAll && isOnlyTestReactDOM ? `<script src="../../../build/dist/react-dom.development.js"></script>` : '' }
   </head>
   <body>
+    <div id="container"></div>
     ${ mainScript }
   </body>
   </html>`
