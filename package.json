@@ -68,6 +68,7 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
+    "nodeman": "^1.1.2",
     "nodemon": "^1.18.6",
     "object-assign": "^4.1.1",
     "prettier": "1.13.7",
@@ -116,7 +117,7 @@
     "prettier-all": "node ./scripts/prettier/index.js write",
     "version-check": "node ./scripts/tasks/version-check.js",
     "custom-build": "yarn build core,dom --type=umd",
-    "custom": "browser-sync start --server --port 6063 --watch custom/build --directory --startPath custom/build/test.html --no-open",
+    "custom": "browser-sync start --server --port 6063 --watch custom/build/**/* --directory --startPath custom/build/test.html --no-open",
     "custom2": "browser-sync start --server --port 6062 --watch fixtures/packaging/babel-standalone --directory --startPath fixtures/packaging/babel-standalone/customDev.html --no-open",
     "custom-generate": "nodemon custom/splitReactDomFile --watch custm/rules.js --watch custom/splitReactDomFile.js"
   }
