@@ -7,7 +7,7 @@ let isTestAll
 let isOnlyTestReact
 let isOnlyTestReactDOM
 
-const mode = 1
+const mode = 3
 
 switch( mode ) {
   case 1:
@@ -150,9 +150,10 @@ function buildHtml( outputHtmlPath, filesData,  ) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     ${ babelScript }
-    ${ ! isTestAll && isOnlyTestReact ? `<script src="../../../build/dist/react.development.js"></script>` : '' }
+    ${ ! isTestAll && isOnlyTestReactDOM ? `<script src="../../../build/dist/react.development.js"></script>` : '' }
     ${ scripts }
-    ${ ! isTestAll && isOnlyTestReactDOM ? `<script src="../../../build/dist/react-dom.development.js"></script>` : '' }
+    ${ ! isTestAll && isOnlyTestReact ? `<script src="../../../build/dist/react-dom.development.js"></script>` : '' }
+
   </head>
   <body>
     <div id="container"></div>
@@ -193,8 +194,8 @@ const buildFoler = PATH.resolve( __dirname, 'build' )
 
 implement( {
   inputs: [
-    isTestAll || isOnlyTestReactDOM ? PATH.resolve( __dirname, '../build/dist/react.development.js' ) : null,
-    isTestAll || isOnlyTestReact ? PATH.resolve( __dirname, '../build/dist/react-dom.development.js' ) : null,
+    isTestAll || isOnlyTestReact ? PATH.resolve( __dirname, '../build/dist/react.development.js' ) : null,
+    isTestAll || isOnlyTestReactDOM ? PATH.resolve( __dirname, '../build/dist/react-dom.development.js' ) : null,
   ],
   buildFoler,
   outputHtmlPath: PATH.resolve( buildFoler, 'test.html' ),
