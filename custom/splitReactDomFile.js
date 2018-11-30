@@ -7,6 +7,8 @@ let isTestAll
 let isOnlyTestReact
 let isOnlyTestReactDOM
 
+const OUTPUT_FOLDER_NAME = 
+  'build'
 const mode = 3
 
 switch( mode ) {
@@ -113,7 +115,7 @@ function buildFiles( filesData ) {
 }
 
 function buildHtml( outputHtmlPath, filesData,  ) {
-  const scripts = filesData.map( ( { file } ) => `<script src="/custom/build/${ file }"></script>` ).join('\n')
+  const scripts = filesData.map( ( { file } ) => `<script src="/custom/${ OUTPUT_FOLDER_NAME }/${ file }"></script>` ).join('\n')
   const babelScript = `<script src="/custom/util/babel.js"></script>`
   const mainScript = `<script type="text/babel">
   // const data = [
@@ -188,7 +190,9 @@ function implement( {
   
 }
 
-const buildFoler = PATH.resolve( __dirname, 'build' )
+
+
+const buildFoler = PATH.resolve( __dirname, OUTPUT_FOLDER_NAME )
 
 
 
