@@ -24,6 +24,7 @@ const Packaging = require('./packaging');
 const {asyncCopyTo, asyncRimRaf} = require('./utils');
 const codeFrame = require('babel-code-frame');
 const Wrappers = require('./wrappers');
+const addFilePathAnnotation = require( '../../ts-custom/custom-rollup-plugin/rollup-plugin-add-file-path-annoation' )
 
 // Errors in promises should be fatal.
 let loggedErrors = new Set();
@@ -406,6 +407,9 @@ function getPlugins(
         };
       },
     }),
+
+    // custom rollup pulgin
+    addFilePathAnnotation({ root: require( 'path' ).resolve( __dirname, '../../../react' ) }),
   ].filter(Boolean);
 }
 

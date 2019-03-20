@@ -22,3 +22,7 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
+
+
+# ts-custom
+ts-custom/build-16.8.4
