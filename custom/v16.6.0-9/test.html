@@ -189,8 +189,24 @@
   //   }
   // }
 
-  function App () {
-    return <h1>Count: 1</h1>
+  // function App () {
+  //   return <h1>Title Text</h1>
+  // }
+
+  class App extends React.Component {
+    state = {
+      count: 1
+    }
+
+    componentDidMount() {
+      this.setState( {
+        count: 2
+      } )
+    }
+
+    render() {
+      return <h1>Count: { this.state.count }</h1>
+    }
   }
   
   ReactDOM.render(
